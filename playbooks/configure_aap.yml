@@ -1,0 +1,7 @@
+---
+- name: Configure AAP Controller
+  hosts: controller
+  gather_facts: false
+  
+  roles:
+    - role: infra.aap_configuration.dispatch

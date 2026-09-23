@@ -4,8 +4,12 @@
   connection: local
   gather_facts: false
 
-  vars_files:
-    - ../group_vars/all/organizations.yml
+  vars:
+    aap_organizations:
+      - name: "GitOps_Managed_Org"
+        description: "Organization managed strictly by infra.aap_configuration via GitHub"
+        state: present
 
   roles:
     - role: infra.aap_configuration.dispatch
+

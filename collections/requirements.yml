@@ -1,18 +1,4 @@
 ---
-# Config:        requirements.yml
-# Purpose:       Collections layered over the supported EE for the platform plays —
-#                infra.aap_configuration for the apply roles, community.general for
-#                drift_report.yml's mail task. The certified collections
-#                infra.aap_configuration depends on (ansible.controller 4.7.11,
-#                ansible.platform 2.6.20260306, ansible.hub 1.0.1) are already
-#                provided by ee-supported-rhel9.
-# Dependencies: Pin each collection to the version supplied by the install source
-#                (Automation Hub validated content or public Galaxy).
-# Note:          Keep these pins in sync with the EE build pins (append_final) in
-#                ees/platform/execution-environment.yml — the baked copies are authoritative at runtime.
-
 collections:
   - name: infra.aap_configuration
-    version: "4.6.1"
-  - name: community.general
-    version: "12.5.0"
+    version: 4.6.1

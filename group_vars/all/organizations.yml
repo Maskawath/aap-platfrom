@@ -1,5 +1,6 @@
 ---
-controller_organizations:
+aap_organizations:
   - name: "GitOps_Managed_Org"
     description: "Organization managed strictly by infra.aap_configuration via GitHub"
     state: present
+

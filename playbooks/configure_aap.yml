@@ -1,7 +1,11 @@
 ---
 - name: Configure AAP Controller
-  hosts: controller
+  hosts: localhost
+  connection: local
   gather_facts: false
-  
+
+  vars_files:
+    - ../group_vars/all/organizations.yml
+
   roles:
     - role: infra.aap_configuration.dispatch
